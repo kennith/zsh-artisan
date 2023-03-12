@@ -84,6 +84,12 @@ ARTISAN_OPEN_ON_MAKE_EDITOR=vim
 #ARTISAN_OPEN_ON_MAKE_EDITOR=code   # VSCode (May require shell commands to be enabled)
 ```
 
+If you wish to use your local PHP, set `ARTISAN_LOCAL_PHP` to `true`. For example:
+
+```zsh
+ARTISAN_LOCAL_PHP=true              # Use local PHP
+```
+
 > The author uses [mhinz/neovim-remote](https://github.com/mhinz/neovim-remote),
 combined with a wrapper script, to automatically open files in an existing neovim
 session within the same tmux session, and automatically switch to the correct
