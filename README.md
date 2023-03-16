@@ -2,6 +2,8 @@
     <img src="https://jessarcher.github.io/zsh-artisan/logo.svg?1" alt="zsh-artisan - Enhanced Laravel integration for zsh" width="400">
 </p>
 
+**This plugin fork from https://github.com/jessarcher/zsh-artisan.git by Jess Archer.**
+
 This plugin adds an `artisan` shell command with the following features:
 
 * It will find and execute `artisan` from anywhere within the project file tree
@@ -30,23 +32,15 @@ This plugin adds an `artisan` shell command with the following features:
 Add the following bundle to your `.zshrc`:
 
 ```zsh
-antigen bundle jessarcher/zsh-artisan
+antigen bundle kennith/zsh-artisan
 ```
-
-### [Fig](https://fig.io)
-
-Fig adds apps, shortcuts, and autocomplete to your existing terminal.
-
-Install `artisan` in just one click.
-
-<a href="https://fig.io/plugins/other/zsh-artisan_jessarcher" target="_blank"><img src="https://fig.io/badges/install-with-fig.svg" /></a>
 
 ### Oh-my-zsh
 
 First download the plugin to your oh-my-zsh custom plugin location:
 
 ```zsh
-git clone https://github.com/jessarcher/zsh-artisan.git ~/.oh-my-zsh/custom/plugins/artisan
+git clone https://github.com/kennith/zsh-artisan.git ~/.oh-my-zsh/custom/plugins/artisan
 ```
 
 > Note that the repository name is prefixed with `zsh-`, however the plugin
@@ -67,7 +61,7 @@ plugins=(
 Add the following to your `.zshrc`:
 
 ```zsh
-zplug "jessarcher/zsh-artisan"
+zplug "kennith/zsh-artisan"
 ```
 
 ## Configuration
@@ -134,19 +128,19 @@ Many more can be found at https://laravel-news.com/bash-aliases
 
 ## Homestead Setup
 
-The Zsh Artisan plugin can be installed automatically with any new or provisioned Laravel Homestead instance. 
-In the root of your Homestead project, add the following to your `after.sh` file. 
+The Zsh Artisan plugin can be installed automatically with any new or provisioned Laravel Homestead instance.
+In the root of your Homestead project, add the following to your `after.sh` file.
 ```bash
 ARTISAN=/home/vagrant/.oh-my-zsh/custom/plugins/artisan
 if [ -d "$ARTISAN" ]; then
   echo "$ARTISAN exist"
 else
-  git clone https://github.com/jessarcher/zsh-artisan.git $ARTISAN
+  git clone https://github.com/kennith/zsh-artisan.git $ARTISAN
   sed -i 's/plugins=(git)/plugins=(git composer artisan)/g' /home/vagrant/.zshrc
   source /home/vagrant/.zshrc
 fi
 ```
-*Note:* If you are re-provisioning your Homestead box, and already have other Zsh plugins defined in your Zsh config files, you wil need to adjust the `sed` command to includes those in the list. 
+*Note:* If you are re-provisioning your Homestead box, and already have other Zsh plugins defined in your Zsh config files, you wil need to adjust the `sed` command to includes those in the list.
 
 ## License
 
@@ -162,3 +156,4 @@ This project is open-sourced software licensed under the MIT License - see the
 * [ahuggins/open-on-make](https://github.com/ahuggins/open-on-make) for the
   "open on make" functionality idea. Unfortunately, adding a dev dependency like
   this isn't an option on some of the projects I work on.
+* [jessarcher/zsh-artisan.git](https://github.com/jessarcher/zsh-artisan.git) creator of the original artisan
