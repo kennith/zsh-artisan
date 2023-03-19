@@ -81,7 +81,7 @@ ARTISAN_OPEN_ON_MAKE_EDITOR=vim
 If you wish to use your local PHP, set `ARTISAN_LOCAL_PHP` to `true`. For example:
 
 ```zsh
-ARTISAN_LOCAL_PHP=true              # Use local PHP
+ZSH_ARTISAN_LOCAL_PHP=true              # Use local PHP
 ```
 
 > The author uses [mhinz/neovim-remote](https://github.com/mhinz/neovim-remote),
